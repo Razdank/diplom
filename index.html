@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Пластиковые окна</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+	</head>
+	<body>
+	<div name="top" class="osnova">
+		<div class="plaha" onclick="closeall()" id="pl">
+		</div>
+		<div class="secret" id="pl2">
+			<div class="menb">
+			<img class="logo" src="Logo.png" width="200px"></img>
+			</div>
+			<div class="menb">
+			Рассчитайте реальную стоимость окон по вашим параметрам
+			</div>
+			<div class="menb">
+			<div class="menbx">
+			<input class="xbut" type="button" onclick="okno2()" value="Х"></input>
+			</div>
+			</div>
+			<div class="vopros1" id="vopr1">
+			Что вам необходимо остеклить?
+			<br><label class="lbl"><input type="radio" id="v11" onclick="bon()" name="v1" value="1">Квартира</label>
+			<br><label class="lbl"><input type="radio" id="v12" onclick="bon()" name="v1" value="2">Балкон</label>
+			<br><label class="lbl"><input type="radio" id="v13" onclick="bon()" name="v1" value="3">Дом</label>
+			</div>
+			<div class="vopros2" id="vopr2">
+			<b>Сколько окон вам необходимо?</b>
+			<br><input id="kol" class="koll" type="text" maxlength="3" name="v2" placeholder="1-999">
+			<div id="er1" class="error1">Ошибка! Некорректный ввод.</div>
+			</div>
+			<div class="vopros2" id="vopr3">
+			Нужна ли ламинация окон?
+			<br><label class="lbl"><input type="radio" id="v31" onclick="bon()" name="v3" value="1">Нет, обычные окна</label>
+			<br><label class="lbl"><input type="radio" id="v32" onclick="bon()" name="v3" value="2">Да, односторонняя</label>
+			<br><label class="lbl"><input type="radio" id="v33" onclick="bon()" name="v3" value="3">Да, двухсторонняя</label>
+			</div>
+			<div class="vopros2" id="vopr4">
+			Выберите подходящие для вас условия:
+			<br><label class="lbl"><input type="radio" id="v41" onclick="bon()" name="v4" value="1">Доставка без установки</label>
+			<br><label class="lbl"><input type="radio" id="v42" onclick="bon()" name="v4" value="2">Установка без доставки</label>
+			<br><label class="lbl"><input type="radio" id="v43" onclick="bon()" name="v4" value="3">Доставка и установка</label>
+			</div>
+			<div class="vopros2" id="vopr5">
+			Как скоро вы планируете покупать окна?
+			<br><label class="lbl"><input type="radio" onclick="bon()" name="v5" value="1">В ближайшую неделю</label>
+			<br><label class="lbl"><input type="radio" onclick="bon()" name="v5" value="2">В течении месяца</label>
+			<br><label class="lbl"><input type="radio" onclick="bon()" name="v5" value="3">В ближайшие 3 месяца</label>
+			<br><label class="lbl"><input type="radio" onclick="bon()" name="v5" value="4">В течении полугода</label>
+			<br><label class="lbl"><input type="radio" onclick="bon()" name="v5" value="5">Пока не планирую</label>
+			</div>
+			<form action="index2.php" method="post">
+				<div class="vopros2" id="vopr6">
+					Благодарим вас за ответы на вопросы. Напишите, пожалуйста, свою электронную почту, чтобы мы передали вам рассчёт стоимости новых окон.
+					<br><input id="kol3" class="koll" type="text" name="email" required placeholder="example@mail.ru"></input>
+					<input id="kol2" class="kollsecret" type="text" name="kolvo"></input>
+				</div>
+			<div id="vs" class="vs">
+			1/6
+			</div>
+			<input id="nextb" class="chetb" type="button" onclick="next()" value="Следующий шаг"></input>
+			<input id="endb" class="chetb2" type="submit" onclick="next()" name="submit" value="Получить результат расчётов"></input>
+			</form>
+		</div>
+		<div class="secretgalery" id="pl3">
+			<div class="bmenbx">
+			<input class="xbut" type="button" onclick="photo2()" value="Х"></input>
+			</div>
+			<br>
+			<a href="#top"><img onclick="before()" class="elupr"></img></a>
+			<img id="galph" class="bimg"></img>
+			<a href="#top"><img onclick="after()" class="elupr2"></img></a>
+		</div>
+		<div class="shapka">
+		<div class="menu1">
+				<div class="pmenu1">
+				<img width="200px" src="Logo.png"></img>
+				<br>Один из лучших производителей пластиковых окон
+				</div>
+				<div class="pmenu1">
+				Наш телефонный номер:
+				<br>8-800-555-35-35
+				<br>Работаем с 12:00 по 20:00 без выходных
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="menu">
+				<div class="pmenu">
+				<img class="osnimg" src="window.png"></img>
+				<br><font size="6"><b>Прекрасное качество!</b></font>
+				</div>
+				<div class="pmenu">
+				Рассчитайте реальную стоимость новых окон, которые вы бы хотели заказать!
+				<br><br><a href="#top"><input class="chetb" type="button" onclick="okno()" value="Рассчитать стоимость окон"></input></a>
+				</div>
+			</div>
+			<div class="galery">
+			<p>Мы сами производим и устанавливаем окна<p>
+			<p>Наша компания существует с 2008 года<p>
+			<p>За всё время существования мы произвели и установили более 5 миллионов окон<p>
+			<br>
+			Вы можете посмотреть нашу фотогалерею:
+			<br>
+			<br>
+			<a href="#top"><img onclick="photo(1)" class="gimg" src="photo1.jpg"></img></a>
+			<a href="#top"><img onclick="photo(2)" class="gimg" src="photo2.jpg"></img></a>
+			<a href="#top"><img onclick="photo(3)" class="gimg" src="photo3.jpg"></img></a>
+			<a href="#top"><img onclick="photo(4)" class="gimg" src="photo4.jpg"></img></a>
+			<a href="#top"><img onclick="photo(5)" class="gimg" src="photo5.jpg"></img></a>
+			</div>
+			<div class="podval">
+			<A href="https://vk.com/queen_fluttershy">© Семенов Дмитрий, 09.05.2020</A>
+			</div>
+		</div>
+	</div>
+	</body>
+	<script src="script.js"></script>
+</html>
